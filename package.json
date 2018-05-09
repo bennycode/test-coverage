@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "@types/node": "10.0.4"
+  },
+  "devDependencies": {
+    "cross-env": "5.1.4",
+    "istanbul": "1.1.0-alpha.1",
+    "jasmine": "3.1.0",
+    "karma": "2.0.2",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-coverage": "1.1.2",
+    "karma-jasmine": "1.1.2",
+    "karma-sourcemap-loader": "0.3.7",
+    "rimraf": "2.6.2",
+    "typescript": "2.8.3",
+    "webpack": "4.8.1",
+    "webpack-cli": "2.1.3"
+  },
+  "license": "ISC",
+  "main": "./dist/commonjs/MyClass.js",
+  "name": "test-coverage",
+  "scripts": {
+    "b": "tsc",
+    "c": "rimraf coverage dist",
+    "cov": "yarn cov:browser && yarn cov:node",
+    "cov:browser": "karma start",
+    "cov:node": "istanbul cover ./node_modules/jasmine/bin/jasmine.js",
+    "d": "yarn c && yarn b",
+    "dt": "yarn d && yarn t",
+    "dtp": "yarn dt && yarn p",
+    "p": "webpack",
+    "t": "jasmine"
+  }
+}

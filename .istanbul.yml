@@ -1,0 +1,15 @@
+verbose: true
+check:
+    global:
+        statements: 100
+        lines: 100
+        branches: 100
+        functions: 100
+        excludes: []
+instrumentation:
+    excludes: ['**/*test.*.js']
+reporting:
+    print: summary
+    reports:
+        - html
+    dir: ./coverage/node

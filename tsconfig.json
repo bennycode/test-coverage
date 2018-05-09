@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "lib": [
+      "DOM",
+      "ES6"
+    ],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitReturns": true,
+    "outDir": "dist/commonjs",
+    "removeComments": true,
+    "rootDir": "src/main",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES5"
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
