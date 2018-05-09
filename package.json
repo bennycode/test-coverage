@@ -3,6 +3,7 @@
     "@types/node": "10.0.4"
   },
   "devDependencies": {
+    "awesome-typescript-loader": "5.0.0",
     "cross-env": "5.1.4",
     "istanbul": "1.1.0-alpha.1",
     "jasmine": "3.1.0",
@@ -29,6 +30,7 @@
     "dt": "yarn d && yarn t",
     "dtp": "yarn dt && yarn p",
     "p": "webpack",
-    "t": "jasmine"
+    "t": "jasmine",
+    "t:browser": "jasmine"
   }
 }
