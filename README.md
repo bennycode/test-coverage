@@ -2,6 +2,6 @@ Execute:
 
 ```bash
 yarn
-yarn dtp
+yarn dt
 yarn cov
 ```

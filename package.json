@@ -27,12 +27,12 @@
     "c": "rimraf coverage dist",
     "cov": "yarn cov:browser && yarn cov:node",
     "cov:browser": "karma start",
-    "cov:node": "istanbul cover ./node_modules/jasmine/bin/jasmine.js",
-    "d": "yarn c && yarn b",
+    "cov:node": "istanbul cover ./node_modules/jasmine/bin/jasmine.js --print detail",
+    "d": "yarn c && yarn b && yarn p",
     "dt": "yarn d && yarn t",
-    "dtp": "yarn dt && yarn p",
     "p": "webpack --verbose",
-    "t": "jasmine",
-    "t:browser": "jasmine"
+    "t": "yarn t:node && yarn t:browser",
+    "t:node": "jasmine",
+    "t:browser": "karma start"
   }
 }
