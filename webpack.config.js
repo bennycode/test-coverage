@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     [`${projectName}.test`]: `${__dirname}/src/main/index.test.browser.js`,
-    [projectName]: `${__dirname}/src/main`,
+    [projectName]: `${__dirname}/src/main/index.ts`,
   },
   mode: 'production',
   module: {
@@ -25,8 +25,7 @@ module.exports = {
   output: {
     filename: `[name].bundle.js`,
     library: 'MyLibrary',
-    path: `${__dirname}/dist/browser`,
-    publicPath: '/',
+    path: `${__dirname}/dist/browser`
   },
   resolve: {
     extensions: ['.js', '.ts']
