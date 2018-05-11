@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = function (config) {
   config.set({
     autoWatch: false,
@@ -8,21 +10,11 @@ module.exports = function (config) {
     },
     colors: true,
     concurrency: Infinity,
-    coverageReporter: {
-      reporters: [
-        {
-          dir: 'coverage/browser',
-          type: 'html',
-        },
-        {
-          dir: 'coverage/browser',
-          type: 'json',
-        },
-        {
-          dir: 'coverage/browser',
-          type: 'text',
-        }
-      ],
+    coverageIstanbulReporter: {
+      reports: ['html', 'json', 'text'],
+      dir: path.join(__dirname, 'coverage', 'browser'),
+      combineBrowserReports: true,
+      fixWebpackSourcePaths: true,
     },
     customLaunchers: {
       ChromeNoSandbox: {
@@ -37,7 +29,7 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
     logLevel: config.LOG_INFO,
     port: 9876,
-    reporters: ['progress', 'coverage'],
+    reporters: ['progress', 'coverage-istanbul'],
     singleRun: true,
   });
 };
