@@ -15,6 +15,12 @@ module.exports = function (config) {
       dir: path.join(__dirname, 'coverage', 'browser'),
       combineBrowserReports: true,
       fixWebpackSourcePaths: true,
+      'report-config': {
+        html: {
+          subdir: 'html',
+          verbose: true
+        }
+      }
     },
     customLaunchers: {
       ChromeNoSandbox: {
