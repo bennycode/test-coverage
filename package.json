@@ -25,9 +25,10 @@
   "scripts": {
     "b": "tsc",
     "c": "rimraf coverage dist",
-    "cov": "yarn cov:browser && yarn cov:node",
+    "cov": "yarn cov:browser && yarn cov:node && yarn cov:report",
     "cov:browser": "karma start",
-    "cov:node": "istanbul cover ./node_modules/jasmine/bin/jasmine.js --print detail",
+    "cov:node": "istanbul cover ./node_modules/jasmine/bin/jasmine.js --print detail --report html --verbose",
+    "cov:report": "istanbul report --root ./coverage --dir ./coverage/report --verbose html",
     "d": "yarn c && yarn b && yarn p",
     "dt": "yarn d && yarn t",
     "p": "webpack --verbose",

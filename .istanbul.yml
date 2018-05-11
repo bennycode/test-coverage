@@ -8,6 +8,8 @@ check:
         excludes: []
 instrumentation:
     excludes: ['**/*test.*.js']
+    extensions:
+         - .js
 reporting:
     print: summary
     reports:

@@ -12,6 +12,10 @@ module.exports = function (config) {
       reporters: [
         {
           dir: 'coverage/browser',
+          type: 'html',
+        },
+        {
+          dir: 'coverage/browser',
           type: 'json',
         },
         {
