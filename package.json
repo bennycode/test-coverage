@@ -29,6 +29,7 @@
     "cov": "yarn cov:browser && yarn cov:node && yarn cov:report",
     "cov:browser": "karma start",
     "cov:node": "istanbul cover ./node_modules/jasmine/bin/jasmine.js --print detail --report html",
+    "cov:node:js": "istanbul report --root ./coverage/node --dir ./coverage/node/js html",
     "cov:node:map": "remap-istanbul -i ./coverage/node/coverage.raw.json -o ./coverage/report/coverage-node.json",
     "cov:node:map:html": "remap-istanbul -i ./coverage/node/coverage.raw.json -o ./coverage/report/node -t html",
     "cov:report": "istanbul report --root ./coverage/report --dir ./coverage/report/html html",
