@@ -28,6 +28,7 @@
     "c": "rimraf coverage dist",
     "cov": "yarn cov:browser && yarn cov:node && yarn cov:report",
     "cov:browser": "karma start",
+    "cov:bundle": "node bundle-coverage.js",
     "cov:node": "istanbul cover ./node_modules/jasmine/bin/jasmine.js --print detail --report html",
     "cov:node:js": "istanbul report --root ./coverage/node --dir ./coverage/node/js html",
     "cov:node:map": "remap-istanbul -i ./coverage/node/coverage.raw.json -o ./coverage/report/coverage-node.json",
