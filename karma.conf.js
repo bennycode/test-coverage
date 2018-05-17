@@ -11,16 +11,16 @@ module.exports = function (config) {
     colors: true,
     concurrency: Infinity,
     coverageIstanbulReporter: {
-      reports: ['html', 'json', 'text'],
-      dir: path.join(__dirname, 'coverage', 'browser'),
       combineBrowserReports: true,
+      dir: path.join(__dirname, 'coverage', 'browser'),
       fixWebpackSourcePaths: true,
       'report-config': {
         html: {
           subdir: 'html',
-          verbose: true
         }
-      }
+      },
+      reports: ['html', 'json', 'text'],
+      verbose: true,
     },
     customLaunchers: {
       ChromeNoSandbox: {
