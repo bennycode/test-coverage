@@ -14,4 +14,4 @@ reporting:
     print: summary
     reports:
         - html
-    dir: ./coverage/node
+    dir: ./coverage/node/cover
