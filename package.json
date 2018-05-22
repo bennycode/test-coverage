@@ -24,20 +24,20 @@
   "main": "./dist/commonjs/MyClass.js",
   "name": "test-coverage",
   "scripts": {
-    "b": "tsc",
-    "c": "rimraf coverage dist",
+    "build": "tsc",
+    "clean": "rimraf coverage dist",
     "cov:browser": "karma start",
     "cov:bundle": "node bundle-coverage.js",
     "cov:node:cover": "istanbul cover ./node_modules/jasmine/bin/jasmine.js --print detail --report html",
-    "cov:node:cover:report": "istanbul report --root ./coverage/node/cover --dir ./coverage/node/report html",
     "cov:node:cover:remap": "remap-istanbul -i ./coverage/node/cover/coverage.raw.json -o ./coverage/node/remap/coverage-node.json",
     "cov:node:cover:remap:html": "remap-istanbul -i ./coverage/node/cover/coverage.raw.json -o ./coverage/node/remap/html -t html",
+    "cov:node:cover:report": "istanbul report --root ./coverage/node/cover --dir ./coverage/node/report html",
     "cov:report": "istanbul report --root ./coverage/report --dir ./coverage/report/html html",
-    "d": "yarn c && yarn b && yarn p",
-    "dt": "yarn d && yarn t",
-    "p": "webpack --verbose",
-    "t": "yarn t:node && yarn t:browser",
-    "t:node": "jasmine",
-    "t:browser": "karma start"
-  }
+    "dist": "yarn clean && yarn build && yarn pack",
+    "pack": "webpack --verbose",
+    "test": "yarn test:node && yarn test:browser",
+    "test:browser": "karma start",
+    "test:node": "jasmine"
+  },
+  "version": "1.0.0"
 }
