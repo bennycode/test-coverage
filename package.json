@@ -32,7 +32,7 @@
     "cov:bundle": "node bundle-coverage.js",
     "cov:node": "istanbul cover ./node_modules/jasmine/bin/jasmine.js --print detail --report html",
     "cov:node:remap": "remap-istanbul -i ./coverage/node/cover/coverage.raw.json -o ./coverage/node/remap/coverage-node.json",
-    "cov:node:cover:remap:html": "remap-istanbul -i ./coverage/node/cover/coverage.raw.json -o ./coverage/node/remap/html -t html",
+    "cov:node:remap:html": "remap-istanbul -i ./coverage/node/cover/coverage.raw.json -o ./coverage/node/remap/html -t html",
     "cov:node:cover:report": "istanbul report --root ./coverage/node/cover --dir ./coverage/node/report html",
     "cov:report": "istanbul report --root ./coverage/report --dir ./coverage/report/html html",
     "dist": "yarn clean && yarn build",
