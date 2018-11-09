@@ -24,7 +24,13 @@ Runs the Jasmine specs and uses Istanbul's `cover` command to report code covera
 - [index.html](./coverage/node/cover/index.html)
 - [coverage.raw.json](./coverage/node/cover/coverage.raw.json)
 
+## `yarn cov:node:remap`
 
+Uses [remap-istanbul](https://github.com/SitePen/remap-istanbul) to convert Istanbul code coverage information ([coverage.raw.json](./coverage/node/cover/coverage.raw.json)) from the Node.js test run into its original source positions ([coverage-node.json](./coverage/node/remap/coverage-node.json)) based on JavaScript Source Maps from the original TypeScript code.
+
+**Output**
+
+- [coverage-node.json](./coverage/node/remap/coverage-node.json)
 
 
 
