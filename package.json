@@ -24,7 +24,9 @@
   "main": "./dist/commonjs/MyClass.js",
   "name": "test-coverage",
   "scripts": {
-    "build": "tsc",
+    "build": "yarn build:node && yarn build:browser",
+    "build:node": "tsc",
+    "build:browser": "webpack",
     "clean": "rimraf coverage dist",
     "cov:browser": "karma start",
     "cov:bundle": "node bundle-coverage.js",
@@ -33,8 +35,7 @@
     "cov:node:cover:remap:html": "remap-istanbul -i ./coverage/node/cover/coverage.raw.json -o ./coverage/node/remap/html -t html",
     "cov:node:cover:report": "istanbul report --root ./coverage/node/cover --dir ./coverage/node/report html",
     "cov:report": "istanbul report --root ./coverage/report --dir ./coverage/report/html html",
-    "dist": "yarn clean && yarn build && yarn pack",
-    "pack": "webpack --verbose",
+    "dist": "yarn clean && yarn build",
     "test": "yarn test:node && yarn test:browser",
     "test:browser": "karma start",
     "test:node": "jasmine"

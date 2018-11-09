@@ -2,10 +2,10 @@
   "compilerOptions": {
     "declaration": true,
     "lib": [
-      "DOM",
-      "ES6"
+      "dom",
+      "es6"
     ],
-    "module": "CommonJS",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitReturns": true,
@@ -14,7 +14,7 @@
     "rootDir": "src/main",
     "sourceMap": true,
     "strict": true,
-    "target": "ES5"
+    "target": "es5"
   },
   "exclude": [
     "dist",
