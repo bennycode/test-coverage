@@ -8,13 +8,19 @@ Uses Karma to run the webpacked Jasmine specs in a browser environment (headless
 - [index.html](./coverage/browser/html/index.html)
 - [coverage-final.json](./coverage/browser/coverage-final.json)
 
-## `yarn cov:node:cover`
+## `yarn cov:node`
 
 Runs the Jasmine specs and uses Istanbul's `cover` command to report code coverage into [coverage/node/cover/index.html](./coverage/node/cover/index.html).
 
+**Specifics**
+- Tests the compiled output (ES5 code) 
+- Coverage is made for the compiled output (ES5 code) WITHOUT remapping it to TypeScript
+
+**Coverage**
+- `MyTest.js`: 80%
+
 **Output**
 
-- MyClass: 100%
 - [index.html](./coverage/node/cover/index.html)
 - [coverage.raw.json](./coverage/node/cover/coverage.raw.json)
 
